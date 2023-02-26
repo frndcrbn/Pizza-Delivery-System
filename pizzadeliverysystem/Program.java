@@ -37,11 +37,11 @@ public class Program {
                     System.out.println("Customer added.");
                     break;
                 case 3:
-                    System.out.println("Menu: ");
+                    System.out.println("#Menu");
                     pizzaRestaurant.displayMenu();
-                    System.out.print("Enter customer(name): ");
+                    System.out.print("Enter customer(name):     ");
                     String name = scanner.next();
-                    System.out.print("Enter pizza(size):    ");
+                    System.out.print("Enter pizza(size):        ");
                     size = scanner.next();
                     Order order = pizzaRestaurant.getOrders().stream().filter(o -> o.getCustomerName().equals(name)).findFirst().orElse(null);
                     Pizza pizza = pizzaRestaurant.getPizzas().stream().filter(p -> p.getSize().equals(size)).findFirst().orElse(null);
